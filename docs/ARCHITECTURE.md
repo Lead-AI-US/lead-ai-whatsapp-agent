@@ -2,21 +2,45 @@
 
 ## Status
 
-Planned
+Prototype / In Development
 
-The final architecture will be defined when WhatsApp integration development begins.
+This document describes the intended architecture. It must be updated when implementation files are added.
 
-## Intended Components
+## System Context
 
-- Webhook endpoint for inbound WhatsApp messages.
-- Provider adapter for Twilio or Meta WhatsApp Business APIs.
-- AI conversation service for replies, qualification, and handoff routing.
-- Lead and conversation storage.
-- Business settings for FAQs, availability, scheduling rules, and escalation rules.
+Lead.AI WhatsApp Agent supports this product role: WhatsApp AI assistant for business leads and customer support.
 
-## Design Principles
+Business problem: Businesses miss WhatsApp leads and manually answer repetitive questions.
 
-- Verify webhook signatures or tokens before processing.
-- Keep provider credentials server-side only.
-- Separate message transport from AI response logic.
-- Support human handoff for uncertain, sensitive, or high-value conversations.
+## Core Layers
+
+- **Experience layer:** user-facing screens, widgets, reports, dashboards, or documentation flows.
+- **API/workflow layer:** input validation, business rules, routing, integrations, and orchestration.
+- **AI layer:** prompts, scoring, summaries, explanations, recommendations, or decision support.
+- **Data layer:** product records, configuration, outputs, audit records, and analytics events.
+- **Security layer:** authentication, authorization, secret management, privacy, logging, and abuse controls.
+
+## Planned Components
+
+- WhatsApp message handling
+- Lead qualification
+- FAQ responses
+- Booking intent detection
+- Business hours handling
+- Escalation to human
+- CRM-ready lead storage
+- Twilio integration placeholder
+
+## Data And Integration Notes
+
+- Store only the data required for the workflow.
+- Keep provider-specific code behind clear adapters.
+- Document data retention and deletion expectations before production use.
+- Avoid storing private customer data in logs or public examples.
+
+## Architecture Principles
+
+- Keep the MVP small and testable.
+- Separate UI, backend, AI, and integration concerns.
+- Validate inputs before persistence or AI processing.
+- Make important AI outputs reviewable and explainable.

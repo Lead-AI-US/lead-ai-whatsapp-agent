@@ -2,23 +2,32 @@
 
 ## Status
 
-Planned
+Prototype / In Development
 
-## Phase 1: Foundation
+## Phase 1: Product Foundation
 
-- Select WhatsApp provider approach.
-- Define webhook, message, lead, and handoff schemas.
-- Document required environment variables and provider setup.
+- Confirm target user and first use case.
+- Define data model, environment variables, and security boundaries.
+- Create the first UI or API skeleton.
+- Add test strategy and deployment assumptions.
 
-## Phase 2: MVP
+## Phase 2: MVP Demo
 
-- Receive and verify inbound WhatsApp messages.
-- Generate safe AI-assisted responses.
-- Capture lead details and appointment intent.
-- Add basic human handoff triggers.
+- Implement the core workflow: Implement webhook verification and a simple qualification conversation flow.
+- Add realistic sample data and public-safe examples.
+- Add screenshots or a short demo video.
+- Validate the workflow with at least one business scenario.
 
-## Phase 3: Product Expansion
+## Phase 3: Trust And Integrations
 
-- Add scheduling integrations.
-- Add conversation analytics.
-- Add business-specific playbooks and escalation rules.
+- Add authentication or protected access where needed.
+- Add integration placeholders or provider adapters.
+- Add monitoring, logging, error handling, and abuse controls.
+- Improve responsible AI notes, human review paths, and explainability.
+
+## Phase 4: Product Readiness
+
+- Add automated tests and setup verification.
+- Finalize deployment documentation.
+- Review security and privacy posture.
+- Decide whether status should move to Demo Ready, In Development, or Production Ready.
